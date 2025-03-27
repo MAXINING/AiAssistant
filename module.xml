@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="aiassistant.ZPM">
+    <Module>
+      <Name>aiassistant</Name>
+      <Version>0.0.1</Version>
+      <Packaging>module</Packaging>
+      <Resource Name="AiAssistant.PKG"/>
+      <SourcesRoot>src</SourcesRoot>
+      <Invokes>
+         <Invoke Class="AiAssistant.Util.initialization" Method="CreatWepApplication" Phase="Activate" When="After"/>
+      </Invokes>
+    </Module>
+  </Document>
+</Export>

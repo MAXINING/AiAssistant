@@ -1,0 +1,11 @@
+
+     do $system.OBJ.ImportDir("/opt/AiAssistant/src/AiAssistant/",,"cbrpsuy",,1)
+     Set tSC = $ClassMethod("EnsPortal.AutoStartProduction","ApplyID","AiAssistant.NewProduction",0)
+     Do ##class(AiAssistant.Util.initialization).initialization()
+     zn "%SYS"
+     Set sc("DispatchClass")="AiAssistant.Util.Rest",sc("AutheEnabled")=64,sc("IsNameSpaceDefault")=0,sc("MatchRoles")=":%All",sc("GroupById")="%ISCMgtPortal",sc("NameSpace")="USER",sc("DeepSeeEnabled")=1
+	Set tSC=##Class(Security.Applications).Create("/csp/getaianswer",.sc)
+     Do ##class(Security.Users).UnExpireUserPasswords("*")
+
+     
+     halt
